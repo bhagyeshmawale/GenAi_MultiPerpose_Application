@@ -132,6 +132,8 @@ This application offers an interactive way to explore and learn about the stock 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Chat with PDF using B💁
+![Screenshot 2024-08-15 155928](https://github.com/user-attachments/assets/5e00fd55-4fba-4b53-838c-ee8af17861db)
+
 📚 Chat with PDFs using Streamlit and Google Generative AI
 This summarization tab allows you to upload and query multiple PDF documents using a Streamlit application. The app leverages Google Generative AI (Gemini) and FAISS for embedding and similarity search, allowing for interactive, conversational responses based on the content of the PDFs.
 
