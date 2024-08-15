@@ -262,6 +262,17 @@ Display model accuracy after training.
 
 **model_selection_page():** Facilitates model selection, train-test split, model training, and displays accuracy metrics.
 
+**🖥️ Usage**
+
+**Upload File:** Start by uploading a CSV, Excel, or JSON file using the file uploader.
+
+
+**Perform EDA:** Navigate to the EDA page to explore summary statistics and the correlation matrix.
+
+**Select Features:** Use the feature selection page to choose the columns to be used in model training.
+
+**Train Model:** Select the type of model (Regression or Classification), choose the specific model, and train it using the selected features.
+
 
 
 
