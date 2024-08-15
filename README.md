@@ -52,8 +52,8 @@ You can extend the functionality of this chatbot by defining additional tools an
 ![Screenshot 2024-08-15 131950](https://github.com/user-attachments/assets/1dd3eaf4-2cc0-4c00-b582-6b7fcd1358e6)
 
 
-🗒️ StockMarket Tutorial with B 📈
-Introduction
+🗒️ StockMarket Tutorial with B 
+📈Introduction
 This application is designed to interactively answer stock market-related questions using content extracted from a PDF document. Built using Streamlit, LangChain, and Ollama LLaMA3.1, the app processes PDF documents, splits them into manageable chunks, and uses a vector database for document retrieval and question answering.
 
 Features
