@@ -273,6 +273,16 @@ Display model accuracy after training.
 
 **Train Model:** Select the type of model (Regression or Classification), choose the specific model, and train it using the selected features.
 
+**📦 Dependencies**
+
+**Streamlit:** Web framework for interactive applications.
+
+**Pandas:** Data manipulation and analysis library.
+
+**Scikit-learn:** Machine learning library for model training.
+
+**Plotly:** Visualization library for interactive charts.
+
 
 
 
