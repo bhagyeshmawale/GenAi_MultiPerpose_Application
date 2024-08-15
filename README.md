@@ -1,10 +1,12 @@
 # Generative AI Multi Purpose Application.
+
+# 🛠️ Chatbot with Tools
 ![image](https://github.com/user-attachments/assets/369ac1b6-7b2c-43bd-a4fe-73091b3c4bc1)
 
 ![Screenshot 2024-08-15 122611](https://github.com/user-attachments/assets/1a05ff3b-f05c-4242-858b-666d1e4b7751)
 
 please check code in repository/chatbot.py
-# 🛠️ Chatbot with Tools
+
 This chatbot tab demonstrates how to build a chatbot using Streamlit, LangChain, and the Ollama LLaMA3.1 model. The chatbot can perform basic mathematical operations such as addition and multiplication, and also respond to natural language inputs. This application leverages tools in LangChain to extend the chatbot's functionality.
 
 📋 Features
@@ -48,11 +50,12 @@ Customization
 You can extend the functionality of this chatbot by defining additional tools and updating the prompt template. Explore the LangChain and Streamlit documentation for more advanced use cases.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 🗒️ StockMarket Tutorial with B 
 ![Screenshot 2024-08-15 131929](https://github.com/user-attachments/assets/a5e9f8bc-e99a-4e50-876e-cf4dd20a3433)
 ![Screenshot 2024-08-15 131950](https://github.com/user-attachments/assets/1dd3eaf4-2cc0-4c00-b582-6b7fcd1358e6)
 
 
-# 🗒️ StockMarket Tutorial with B 
+
 📈**Introduction**
 This application is designed to interactively answer stock market-related questions using content extracted from a PDF document. Built using Streamlit, LangChain, and Ollama LLaMA3.1, the app processes PDF documents, splits them into manageable chunks, and uses a vector database for document retrieval and question answering.
 
