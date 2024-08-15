@@ -226,6 +226,42 @@ pdf_summary(): Manages the main Streamlit UI and orchestrates the PDF processing
 
 ![Screenshot 2024-08-15 161621](https://github.com/user-attachments/assets/3d77a4b8-07aa-4f3b-ba88-2ce66ca31199)
 
+This project provides a Streamlit web application that allows users to upload datasets, perform Exploratory Data Analysis (EDA), select features, and train machine learning models. The application supports CSV, Excel, and JSON file formats.
+
+🚀 Features
+**Upload CSV/Excel/JSON File:**
+
+Users can upload a dataset in CSV, Excel (.xlsx, .xls), or JSON format.
+The uploaded file is processed and stored for further analysis.
+**Exploratory Data Analysis (EDA):**
+
+Generate summary statistics for the dataset.
+Visualize the correlation matrix using an interactive heatmap.
+**Feature Selection:**
+
+Select specific columns from the dataset to be used as features.
+Store the selected features for model training.
+**Model Selection and Training:**
+
+Choose between Regression and Classification models.
+Select specific models such as Linear Regression, Random Forest Regressor, Logistic Regression, and Random Forest Classifier.
+Perform train-test split and train the selected model.
+Display model accuracy after training.
+
+**📄 Code Structure**
+
+
+**upload_page():** Handles the file upload functionality and stores the uploaded data in the session state.
+
+
+**eda_page():** Performs exploratory data analysis, including summary statistics and correlation matrix visualization.
+
+
+**feature_selection_page():** Allows users to select features from the dataset for model training.
+
+
+**model_selection_page():** Facilitates model selection, train-test split, model training, and displays accuracy metrics.
+
 
 
 
