@@ -22,8 +22,8 @@ Streamlit
 LangChain
 Ollama LLaMA3.1 model
 
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+[git clone https://github.com/yourusername/your-repo-name.git](https://github.com/bhagyeshmawale/GenAi_MultiPerpose_Application.git)
+
 
 import streamlit as st
 from langchain_community.llms import Ollama
