@@ -132,7 +132,8 @@ This application offers an interactive way to explore and learn about the stock 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Chat with PDF using B💁
-![Screenshot 2024-08-15 155928](https://github.com/user-attachments/assets/5e00fd55-4fba-4b53-838c-ee8af17861db)
+![Screenshot 2024-08-15 160119](https://github.com/user-attachments/assets/908f7600-10b4-48a7-91f9-27caa93734c5)
+
 
 📚 **Chat with PDFs using Streamlit and Google Generative AI**
 This summarization tab allows you to upload and query multiple PDF documents using a Streamlit application. The app leverages Google Generative AI (Gemini) and FAISS for embedding and similarity search, allowing for interactive, conversational responses based on the content of the PDFs.
@@ -202,6 +203,36 @@ get_conversational_chain(): Sets up the QA model using Google Generative AI and 
 user_input(user_question): Handles user queries, retrieves relevant text chunks, and generates a response.
 
 pdf_summary(): Manages the main Streamlit UI and orchestrates the PDF processing and user interactions.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Data Analysis and Machine Learning Models
+
+**Upload Data**
+
+![Screenshot 2024-08-15 160349](https://github.com/user-attachments/assets/12dfce19-1dd4-49d6-911f-179042d4d3ba)
+
+**EDA**
+
+![Screenshot 2024-08-15 160722](https://github.com/user-attachments/assets/961c6124-6c53-4e84-b932-4a4899663a32)
+![Screenshot 2024-08-15 160743](https://github.com/user-attachments/assets/5e87a350-d041-4001-adac-e431f1714611)
+
+**Feature Selection**
+
+![Screenshot 2024-08-15 160841](https://github.com/user-attachments/assets/65f70a86-27d4-4aeb-9111-287d0116582e)
+
+**Model Selection | Train & Test variables | Model Validation | Accuracy**
+
+![Screenshot 2024-08-15 161621](https://github.com/user-attachments/assets/3d77a4b8-07aa-4f3b-ba88-2ce66ca31199)
+
+
+
+
+
+
+
+
+
 
 
 
