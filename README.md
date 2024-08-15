@@ -52,26 +52,26 @@ You can extend the functionality of this chatbot by defining additional tools an
 ![Screenshot 2024-08-15 131950](https://github.com/user-attachments/assets/1dd3eaf4-2cc0-4c00-b582-6b7fcd1358e6)
 
 
-🗒️ StockMarket Tutorial with B 
-📈Introduction
+🗒️ **StockMarket Tutorial with B **
+📈**Introduction**
 This application is designed to interactively answer stock market-related questions using content extracted from a PDF document. Built using Streamlit, LangChain, and Ollama LLaMA3.1, the app processes PDF documents, splits them into manageable chunks, and uses a vector database for document retrieval and question answering.
 
-Features
+**Features**
 Load and process PDF documents for stock market tutorials.
 Answer questions interactively based on the content of the PDFs.
 Perform document similarity searches to find relevant information.
 
-Usage
+**Usage**
 To run the application:
 
-Load PDF Documents
+**Load PDF Documents**
 
 The application currently processes a PDF document named ssm.pdf located in the project directory. You can replace this file with your own PDF document.
 
-Usage
+**Usage**
 To run the application:
 
-Load PDF Documents
+**Load PDF Documents**
 
 The application currently processes a PDF document named ssm.pdf located in the project directory. You can replace this file with your own PDF document.
 streamlit run app.py
@@ -81,11 +81,10 @@ Open your web browser and navigate to the local Streamlit server (usually http:/
 Input your question related to the stock market in the text box.
 The app will retrieve and display the most relevant content from the PDF document, along with the answer.
 
-Code Walkthrough
+**Code Walkthrough**
 The following steps describe how the application works:
 
-Loading and Splitting the PDF Document
-
+**Loading and Splitting the PDF Document**
 The application uses PyPDFLoader to load the PDF document and RecursiveCharacterTextSplitter to split the content into chunks.
 
 loader = PyPDFLoader('ssm.pdf')
@@ -93,13 +92,13 @@ docs = loader.load()
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 documents = text_splitter.split_documents(docs[:50])
 
-Embedding and Vector Store
+**Embedding and Vector Store**
 
 The application creates embeddings using the OllamaEmbeddings model and stores them in a FAISS vector database.
 embeddings = OllamaEmbeddings(model="mxbai-embed-large")
 vectors = FAISS.from_documents(documents, embeddings)
 
-Designing the Chat Prompt Template
+**Designing the Chat Prompt Template**
 
 The prompt is designed to instruct the model to answer questions based on the provided context.
 
@@ -112,7 +111,7 @@ Think step by step before providing a detailed answer.
 Question: {input}""")
 
 
-Setting Up the Retrieval Chain
+**Setting Up the Retrieval Chain**
 
 A retrieval chain is created to retrieve the relevant documents and generate answers using the Ollama LLaMA3.1 model.
 retrieval_chain = create_retrieval_chain(retriever, document_chain)
@@ -125,7 +124,7 @@ if prompt:
     response = retrieval_chain.invoke({"input": prompt})
     st.write(response['answer'])
 
-Conclusion
+**Conclusion**
 This application offers an interactive way to explore and learn about the stock market using PDF documents. By leveraging advanced AI models and vector search techniques, it provides accurate and contextually relevant answers to user queries.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
