@@ -47,4 +47,6 @@ Create a prompt template and link it with the model and output parser.
 Customization
 You can extend the functionality of this chatbot by defining additional tools and updating the prompt template. Explore the LangChain and Streamlit documentation for more advanced use cases.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
