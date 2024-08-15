@@ -131,6 +131,69 @@ if prompt:
 This application offers an interactive way to explore and learn about the stock market using PDF documents. By leveraging advanced AI models and vector search techniques, it provides accurate and contextually relevant answers to user queries.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Chat with PDF using B💁
+📚 Chat with PDFs using Streamlit and Google Generative AI
+This summarization tab allows you to upload and query multiple PDF documents using a Streamlit application. The app leverages Google Generative AI (Gemini) and FAISS for embedding and similarity search, allowing for interactive, conversational responses based on the content of the PDFs.
+
+🛠️ Features
+Upload Multiple PDFs: Users can upload multiple PDF files for processing.
+Extract Text: Text is extracted from the uploaded PDFs.
+Text Chunking: The extracted text is split into chunks to optimize embedding and search processes.
+Vector Store Creation: A FAISS vector store is created from the text chunks for efficient querying.
+Interactive QA: Users can input questions, and the app provides detailed answers based on the PDF content.
+Downloadable Responses: Users can download the generated answers as a text file.
+🧰 Installation
+Clone the Repository:
+
+bash
+Copy code
+git clone <repository-url>
+cd <repository-directory>
+Install Dependencies:
+Make sure you have Python installed, then run:
+
+bash
+Copy code
+pip install -r requirements.txt
+Set Up Environment Variables:
+Create a .env file in the project root directory and add your Google API key:
+
+makefile
+Copy code
+GOOGLE_API_KEY=your_google_api_key_here
+Run the Application:
+
+bash
+Copy code
+streamlit run app.py
+📝 How It Works
+PDF Upload and Processing:
+
+The application allows users to upload multiple PDF files via the sidebar.
+On clicking "Submit & Process," the application reads the PDFs and extracts their text.
+Text Chunking:
+
+The extracted text is split into manageable chunks using the RecursiveCharacterTextSplitter.
+Vector Store Creation:
+
+The text chunks are embedded using Google Generative AI embeddings and stored in a FAISS vector store.
+Question Answering:
+
+Users can input questions related to the content of the PDFs.
+The system retrieves relevant chunks using similarity search and generates a detailed response.
+Download Response:
+
+The generated response is displayed on the page, and users can download it as a text file.
+⚙️ Code Structure
+get_pdf_text(pdf_docs): Extracts text from the provided PDF documents.
+get_text_chunks(text): Splits the extracted text into chunks for better processing.
+get_vector_store(text_chunks): Creates and saves a FAISS vector store from the text chunks.
+get_conversational_chain(): Sets up the QA model using Google Generative AI and prepares it for generating responses.
+user_input(user_question): Handles user queries, retrieves relevant text chunks, and generates a response.
+pdf_summary(): Manages the main Streamlit UI and orchestrates the PDF processing and user interactions.
+
+
+
 
 
 
