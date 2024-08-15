@@ -192,11 +192,18 @@ The generated response is displayed on the page, and users can download it as a 
 
 **⚙️ Code Structure**
 get_pdf_text(pdf_docs): Extracts text from the provided PDF documents.
+
 get_text_chunks(text): Splits the extracted text into chunks for better processing.
+
 get_vector_store(text_chunks): Creates and saves a FAISS vector store from the text chunks.
+
 get_conversational_chain(): Sets up the QA model using Google Generative AI and prepares it for generating responses.
+
 user_input(user_question): Handles user queries, retrieves relevant text chunks, and generates a response.
+
 pdf_summary(): Manages the main Streamlit UI and orchestrates the PDF processing and user interactions.
+
+
 
 
 
