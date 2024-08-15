@@ -5,16 +5,17 @@
 
 ![Screenshot 2024-08-15 122611](https://github.com/user-attachments/assets/1a05ff3b-f05c-4242-858b-666d1e4b7751)
 
-please check code in repository/chatbot.py
 
 This chatbot tab demonstrates how to build a chatbot using Streamlit, LangChain, and the Ollama LLaMA3.1 model. The chatbot can perform basic mathematical operations such as addition and multiplication, and also respond to natural language inputs. This application leverages tools in LangChain to extend the chatbot's functionality.
 
-📋 Features
+**📋 Features**
+
 Math Operations: The chatbot can add or multiply two integers.
 Natural Language Processing: The chatbot can respond to natural language inputs by utilizing the Ollama LLaMA3.1 model.
 Tool Integration: The chatbot can select and execute tools based on user input using a JSON-based command structure.
 
-🚀 Getting Started
+**🚀 Getting Started**
+
 Prerequisites
 Python 3.8 or higher
 Streamlit
