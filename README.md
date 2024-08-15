@@ -168,7 +168,9 @@ Run the Application:
 bash
 Copy code
 streamlit run app.py
-📝 How It Works
+
+
+**📝 How It Works**
 **PDF Upload and Processing:**
 
 The application allows users to upload multiple PDF files via the sidebar.
@@ -176,9 +178,10 @@ On clicking "Submit & Process," the application reads the PDFs and extracts thei
 Text Chunking:
 
 The extracted text is split into manageable chunks using the RecursiveCharacterTextSplitter.
-Vector Store Creation:
 
+**Vector Store Creation:**
 The text chunks are embedded using Google Generative AI embeddings and stored in a FAISS vector store.
+
 **Question Answering:**
 
 Users can input questions related to the content of the PDFs.
@@ -186,6 +189,7 @@ The system retrieves relevant chunks using similarity search and generates a det
 Download Response:
 
 The generated response is displayed on the page, and users can download it as a text file.
+
 **⚙️ Code Structure**
 get_pdf_text(pdf_docs): Extracts text from the provided PDF documents.
 get_text_chunks(text): Splits the extracted text into chunks for better processing.
