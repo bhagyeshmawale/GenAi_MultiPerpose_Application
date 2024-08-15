@@ -134,17 +134,17 @@ This application offers an interactive way to explore and learn about the stock 
 # Chat with PDF using B💁
 ![Screenshot 2024-08-15 155928](https://github.com/user-attachments/assets/5e00fd55-4fba-4b53-838c-ee8af17861db)
 
-📚 Chat with PDFs using Streamlit and Google Generative AI
+📚 **Chat with PDFs using Streamlit and Google Generative AI**
 This summarization tab allows you to upload and query multiple PDF documents using a Streamlit application. The app leverages Google Generative AI (Gemini) and FAISS for embedding and similarity search, allowing for interactive, conversational responses based on the content of the PDFs.
 
-🛠️ Features
-Upload Multiple PDFs: Users can upload multiple PDF files for processing.
+🛠️ **Features**
+**Upload Multiple PDFs:** Users can upload multiple PDF files for processing.
 Extract Text: Text is extracted from the uploaded PDFs.
 Text Chunking: The extracted text is split into chunks to optimize embedding and search processes.
 Vector Store Creation: A FAISS vector store is created from the text chunks for efficient querying.
 Interactive QA: Users can input questions, and the app provides detailed answers based on the PDF content.
 Downloadable Responses: Users can download the generated answers as a text file.
-🧰 Installation
+🧰 **Installation**
 Clone the Repository:
 
 bash
@@ -169,7 +169,7 @@ bash
 Copy code
 streamlit run app.py
 📝 How It Works
-PDF Upload and Processing:
+**PDF Upload and Processing:**
 
 The application allows users to upload multiple PDF files via the sidebar.
 On clicking "Submit & Process," the application reads the PDFs and extracts their text.
@@ -179,14 +179,14 @@ The extracted text is split into manageable chunks using the RecursiveCharacterT
 Vector Store Creation:
 
 The text chunks are embedded using Google Generative AI embeddings and stored in a FAISS vector store.
-Question Answering:
+**Question Answering:**
 
 Users can input questions related to the content of the PDFs.
 The system retrieves relevant chunks using similarity search and generates a detailed response.
 Download Response:
 
 The generated response is displayed on the page, and users can download it as a text file.
-⚙️ Code Structure
+**⚙️ Code Structure**
 get_pdf_text(pdf_docs): Extracts text from the provided PDF documents.
 get_text_chunks(text): Splits the extracted text into chunks for better processing.
 get_vector_store(text_chunks): Creates and saves a FAISS vector store from the text chunks.
