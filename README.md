@@ -60,7 +60,7 @@ You can extend the functionality of this chatbot by defining additional tools an
 
 
 📈**Introduction**
-This application is designed to interactively answer stock market-related questions using content extracted from a PDF document. Built using Streamlit, LangChain, and Ollama LLaMA3.1, the app processes PDF documents, splits them into manageable chunks, and uses a vector database for document retrieval and question answering.
+This question answer tab is designed to interactively answer stock market-related questions using content extracted from a PDF document. Built using Streamlit, LangChain, and Ollama LLaMA3.1, the app processes PDF documents, splits them into manageable chunks, and uses a vector database for document retrieval and question answering.
 
 **Features**
 Load and process PDF documents for stock market tutorials.
