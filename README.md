@@ -217,7 +217,8 @@ pdf_summary(): Manages the main Streamlit UI and orchestrates the PDF processing
 
 **Upload Data**
 
-![image](https://github.com/user-attachments/assets/9ec2c4f6-2c9f-4d54-93a3-b465474a7330)
+![image](https://github.com/user-attachments/assets/86eb134c-aa7f-4271-8445-839c1a2037d5)
+
 
 
 **EDA**
