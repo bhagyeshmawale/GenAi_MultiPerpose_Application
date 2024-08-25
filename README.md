@@ -3,58 +3,6 @@
 
 ![image](https://github.com/user-attachments/assets/369ac1b6-7b2c-43bd-a4fe-73091b3c4bc1)
 
-# 🛠️ Chatbot with Tools
-
-![Screenshot 2024-08-15 122611](https://github.com/user-attachments/assets/1a05ff3b-f05c-4242-858b-666d1e4b7751)
-
-
-This chatbot tab demonstrates how to build a chatbot using Streamlit, LangChain, and the Ollama LLaMA3.1 model. The chatbot can perform basic mathematical operations such as addition and multiplication, and also respond to natural language inputs. This application leverages tools in LangChain to extend the chatbot's functionality.
-
-**📋 Features**
-
-
-Math Operations: The chatbot can add or multiply two integers.
-Natural Language Processing: The chatbot can respond to natural language inputs by utilizing the Ollama LLaMA3.1 model.
-Tool Integration: The chatbot can select and execute tools based on user input using a JSON-based command structure.
-
-**🚀 Getting Started**
-
-
-Prerequisites
-Python 3.8 or higher
-Streamlit
-LangChain
-Ollama LLaMA3.1 model
-
-https://github.com/bhagyeshmawale/GenAi_MultiPerpose_Application.git
-
-
-import streamlit as st
-from langchain_community.llms import Ollama
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_community.chat_message_histories import StreamlitChatMessageHistory
-from langchain_core.tools import tool
-from langchain.tools.render import render_text_description
-from langchain_core.output_parsers import JsonOutputParser
-from operator import itemgetter
-
-Model Initialization
-Initialize the Ollama LLaMA3.1 model with verbosity enabled.
-
-Define Tools
-Define the tools available for the chatbot.
-
-Tool Rendering
-Render the tools as a text description.
-
-Prompt and Chain Creation
-Create a prompt template and link it with the model and output parser.
-
-
-Customization
-You can extend the functionality of this chatbot by defining additional tools and updating the prompt template. Explore the LangChain and Streamlit documentation for more advanced use cases.
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 🗒️ StockMarket Tutorial with B 
 ![Screenshot 2024-08-15 131929](https://github.com/user-attachments/assets/a5e9f8bc-e99a-4e50-876e-cf4dd20a3433)
 ![Screenshot 2024-08-15 131950](https://github.com/user-attachments/assets/1dd3eaf4-2cc0-4c00-b582-6b7fcd1358e6)
@@ -136,6 +84,59 @@ if prompt:
 This application offers an interactive way to explore and learn about the stock market using PDF documents. By leveraging advanced AI models and vector search techniques, it provides accurate and contextually relevant answers to user queries.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 🛠️ Chatbot with Tools
+
+![Screenshot 2024-08-15 122611](https://github.com/user-attachments/assets/1a05ff3b-f05c-4242-858b-666d1e4b7751)
+
+
+This chatbot tab demonstrates how to build a chatbot using Streamlit, LangChain, and the Ollama LLaMA3.1 model. The chatbot can perform basic mathematical operations such as addition and multiplication, and also respond to natural language inputs. This application leverages tools in LangChain to extend the chatbot's functionality.
+
+**📋 Features**
+
+
+Math Operations: The chatbot can add or multiply two integers.
+Natural Language Processing: The chatbot can respond to natural language inputs by utilizing the Ollama LLaMA3.1 model.
+Tool Integration: The chatbot can select and execute tools based on user input using a JSON-based command structure.
+
+**🚀 Getting Started**
+
+
+Prerequisites
+Python 3.8 or higher
+Streamlit
+LangChain
+Ollama LLaMA3.1 model
+
+https://github.com/bhagyeshmawale/GenAi_MultiPerpose_Application.git
+
+
+import streamlit as st
+from langchain_community.llms import Ollama
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_community.chat_message_histories import StreamlitChatMessageHistory
+from langchain_core.tools import tool
+from langchain.tools.render import render_text_description
+from langchain_core.output_parsers import JsonOutputParser
+from operator import itemgetter
+
+Model Initialization
+Initialize the Ollama LLaMA3.1 model with verbosity enabled.
+
+Define Tools
+Define the tools available for the chatbot.
+
+Tool Rendering
+Render the tools as a text description.
+
+Prompt and Chain Creation
+Create a prompt template and link it with the model and output parser.
+
+
+Customization
+You can extend the functionality of this chatbot by defining additional tools and updating the prompt template. Explore the LangChain and Streamlit documentation for more advanced use cases.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Chat with PDF using B💁
 ![Screenshot 2024-08-15 160119](https://github.com/user-attachments/assets/908f7600-10b4-48a7-91f9-27caa93734c5)
 
