@@ -1,7 +1,8 @@
 # Stock Market Analysis Application using LLM.
 
 
-![image](https://github.com/user-attachments/assets/369ac1b6-7b2c-43bd-a4fe-73091b3c4bc1)
+![image](https://github.com/user-attachments/assets/569897fc-4722-4e0c-a027-071ee645c970)
+
 
 # 🗒️ StockMarket Tutorial with B 
 ![Screenshot 2024-08-15 131929](https://github.com/user-attachments/assets/a5e9f8bc-e99a-4e50-876e-cf4dd20a3433)
