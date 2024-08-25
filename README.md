@@ -5,7 +5,10 @@
 
 
 # 🗒️ StockMarket Tutorial with B 
-![image](https://github.com/user-attachments/assets/2ba72527-7c27-4759-9026-cda755e9c213)
+![Screenshot 2024-08-15 131929](https://github.com/user-attachments/assets/47df6ef6-d7a9-49a6-b620-642b7c5c1fcb)
+![Screenshot 2024-08-15 131950](https://github.com/user-attachments/assets/fe54bd0c-d40f-4d6e-b73c-345c7da8a610)
+
+
 
 
 
@@ -222,13 +225,12 @@ pdf_summary(): Manages the main Streamlit UI and orchestrates the PDF processing
 
 
 **EDA**
-
-![Screenshot 2024-08-15 160722](https://github.com/user-attachments/assets/961c6124-6c53-4e84-b932-4a4899663a32)
-![Screenshot 2024-08-15 160743](https://github.com/user-attachments/assets/5e87a350-d041-4001-adac-e431f1714611)
+![image](https://github.com/user-attachments/assets/2ba72527-7c27-4759-9026-cda755e9c213)
 
 **Feature Selection**
 
-![Screenshot 2024-08-15 160841](https://github.com/user-attachments/assets/65f70a86-27d4-4aeb-9111-287d0116582e)
+![image](https://github.com/user-attachments/assets/24b1873f-3e98-4af7-ad3a-cdf66ec54a06)
+
 
 **Model Selection | Train & Test variables | Model Validation | Accuracy**
 
