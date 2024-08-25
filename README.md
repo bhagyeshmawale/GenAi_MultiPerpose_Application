@@ -5,8 +5,8 @@
 
 
 # 🗒️ StockMarket Tutorial with B 
-![Screenshot 2024-08-15 131929](https://github.com/user-attachments/assets/a5e9f8bc-e99a-4e50-876e-cf4dd20a3433)
-![Screenshot 2024-08-15 131950](https://github.com/user-attachments/assets/1dd3eaf4-2cc0-4c00-b582-6b7fcd1358e6)
+![image](https://github.com/user-attachments/assets/2ba72527-7c27-4759-9026-cda755e9c213)
+
 
 
 
