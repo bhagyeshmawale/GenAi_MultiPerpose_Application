@@ -10,13 +10,13 @@ def login():
     if st.button("Log in"):
         st.session_state.logged_in = True
         st.rerun()
-    st.image(image, caption='GenAi Multi Perpose Application', use_column_width=True)
+    st.image(image, caption='Stock Market Analysis Application using LLM', use_column_width=True)
 
 def logout():
     if st.button("Log out"):
         st.session_state.logged_in = False
         st.rerun()
-    st.image(image, caption='GenAi Multi Perpose Application', use_column_width=True)
+    st.image(image, caption='Stock Market Analysis Application using LLM', use_column_width=True)
 
 login_page = st.Page(login, title="Log in", icon=":material/login:")
 logout_page = st.Page(logout, title="Log out", icon=":material/logout:")
@@ -43,7 +43,7 @@ if st.session_state.logged_in:
     pg = st.navigation(
         {
             "Account": [logout_page],
-            "Playground": [chatbot, Question_Answers, chain_of_thoughts],
+            "Playground": [Question_Answers,chatbot,chain_of_thoughts],
             "Summarization": [pdf_word_text],
             "ML Data Analysis": [data,eda,feature_selection,model],
 

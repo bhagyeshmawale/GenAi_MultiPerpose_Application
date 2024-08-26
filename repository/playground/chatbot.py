@@ -10,7 +10,7 @@ from operator import itemgetter # to retrieve specific items in our chain.
 
 
 from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.util.retry import Retry
+
 import requests
 
 

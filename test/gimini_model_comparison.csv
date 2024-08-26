@@ -1,0 +1,21 @@
+Capability,Benchmark,Description,Gemini 1.0 Pro,Gemini 1.0 Ultra,Gemini 1.5 Pro (Feb 2024),Gemini 1.5 Flash,Gemini 1.5 Pro (May 2024)
+"General MMLU Representation of questions in 57 subjects (incl. STEM, humanities, and others)",,,,,,,
+General,MMLU,"Representation of questions in 57 subjects (incl. STEM, humanities, and others)",Gemini 1.0 Pro 71.8%,Gemini 1.0 Ultra 83.7%,Gemini 1.5 Pro (Feb 2024) 81.9%,Gemini 1.5 Flash 78.9%,Gemini 1.5 Pro (May 2024) 85.9%
+"Code Natural2Code Python code generation. Held out dataset HumanEval-like, not leaked on the web",,,,,,,
+Code,Natural2Code,"Python code generation. Held out dataset HumanEval-like, not leaked on the web",Gemini 1.0 Pro 69.6%,Gemini 1.0 Ultra 74.9%,Gemini 1.5 Pro (Feb 2024) 77.7%,Gemini 1.5 Flash 77.2%,Gemini 1.5 Pro (May 2024) 82.6%
+"Math MATH Challenging math problems (incl. algebra, geometry, pre-calculus, and others)",,,,,,,
+Math,MATH,"Challenging math problems (incl. algebra, geometry, pre-calculus, and others)",Gemini 1.0 Pro 32.6%,Gemini 1.0 Ultra 53.2%,Gemini 1.5 Pro (Feb 2024) 58.5%,Gemini 1.5 Flash 54.9%,Gemini 1.5 Pro (May 2024) 67.7%
+"Reasoning GPQA (main) Challenging dataset of questions written by domain experts in biology, physics, and chemistry",,,,,,,
+Reasoning,GPQA (main),"Challenging dataset of questions written by domain experts in biology, physics, and chemistry",Gemini 1.0 Pro 27.9%,Gemini 1.0 Ultra 35.7%,Gemini 1.5 Pro (Feb 2024) 41.5%,Gemini 1.5 Flash 39.5%,Gemini 1.5 Pro (May 2024) 46.2%
+Reasoning Big-Bench Hard Diverse set of challenging tasks requiring multi-step reasoning,,,,,,,
+,Big-Bench Hard,Diverse set of challenging tasks requiring multi-step reasoning,Gemini 1.0 Pro 75.0%,Gemini 1.0 Ultra 83.6%,Gemini 1.5 Pro (Feb 2024) 84.0%,Gemini 1.5 Flash 85.5%,Gemini 1.5 Pro (May 2024) 89.2%
+Multilingual WMT23 Language translation,,,,,,,
+Multilingual,WMT23,Language translation,Gemini 1.0 Pro 71.7,Gemini 1.0 Ultra 74.4,Gemini 1.5 Pro (Feb 2024) 75.2,Gemini 1.5 Flash 74.1,Gemini 1.5 Pro (May 2024) 75.3
+Image  MMMU Multi-discipline college-level reasoning problems,,,,,,,
+Image,MMMU,Multi-discipline college-level reasoning problems,Gemini 1.0 Pro 47.9%,Gemini 1.0 Ultra 59.4%,Gemini 1.5 Pro (Feb 2024) 58.5%,Gemini 1.5 Flash 56.1%,Gemini 1.5 Pro (May 2024) 62.2%
+Image  MathVista Multi-discipline college-level reasoning problems,,,,,,,
+,MathVista,Mathematical reasoning in visual contexts,Gemini 1.0 Pro 46.6%,Gemini 1.0 Ultra 53.0%,Gemini 1.5 Pro (Feb 2024) 54.7%,Gemini 1.5 Flash 58.4%,Gemini 1.5 Pro (May 2024) 63.9%
+"Audio  FLEURS (55 languages) Automatic speech recognition (based on word error rate, lower is better)",,,,,,,
+Audio,FLEURS (55 languages),"Automatic speech recognition (based on word error rate, lower is better)",Gemini 1.0 Pro 6.4%,Gemini 1.0 Ultra 6.0%,Gemini 1.5 Pro (Feb 2024) 6.6%,Gemini 1.5 Flash 9.8%,Gemini 1.5 Pro (May 2024) 6.5%
+Video EgoSchema Video question answering,,,,,,,
+Video,EgoSchema,Video question answering,Gemini 1.0 Pro 55.7%,Gemini 1.0 Ultra 61.5%,Gemini 1.5 Pro (Feb 2024) 65.1%,Gemini 1.5 Flash 65.7%,Gemini 1.5 Pro (May 2024) 72.2%
