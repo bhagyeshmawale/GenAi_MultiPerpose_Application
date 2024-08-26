@@ -1,22 +1,36 @@
+#streamlit: Used for developing the web application interface.
+import streamlit as st
+
 ## Pdf reader
 from langchain_community.document_loaders import PyPDFLoader
 
-import streamlit as st
-import os
 
-
-from langchain_community.embeddings import OllamaEmbeddings
+# documents are then split into manageable chunks using the RecursiveCharacterTextSplitter
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.chains.combine_documents import create_stuff_documents_chain
+
+#OllamaEmbeddings:Generates vector embeddings from documents, which are then used for similarity searches in the FAISS vector store.
+from langchain_community.embeddings import OllamaEmbeddings
+
+#A prompt template for chat models
 from langchain_core.prompts import ChatPromptTemplate
+
 from langchain.chains import create_retrieval_chain
-from langchain_community.vectorstores import FAISS
-import time
+#FAISS (Facebook AI Similarity Search): Utilized as the vector store for efficient similarity search and retrieval.
+from langchain_community.vectorstores import FAISS 
+
+#LLM Model Ollama's LLaMA 3.1.
 from langchain_community.llms import Ollama
 
-from dotenv import load_dotenv
-load_dotenv()
+#Create a chain for passing a list of Documents to a model. 
+from langchain.chains.combine_documents import create_stuff_documents_chain
 
+#dotenv: Manages environment variables securely.
+from dotenv import load_dotenv   
+import os
+import time
+
+# Loads all the required API Keys
+load_dotenv()
 os.environ["LANGCHAIN_TRACING_V2"] ="true"
 os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 LANGCHAIN_PROJECT="stock_market"
@@ -24,31 +38,35 @@ LANGCHAIN_PROJECT="stock_market"
 
 
 
-# loader=PyPDFLoader('ssm.pdf')
-# docs=loader.load()
-
-# text_splitter=RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)
-# documents=text_splitter.split_documents(docs)
-
-from langchain_chroma import Chroma
-from langchain_community.document_loaders import TextLoader
-from langchain_community.embeddings.sentence_transformer import (
-    SentenceTransformerEmbeddings,
-)
 
 
-# from langchain_text_splitters import CharacterTextSplitter
-# embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-# db = Chroma.from_documents(documents, embedding_function)
+if "vector" not in st.session_state:   
 
-from langchain_community.embeddings import OllamaEmbeddings
-from langchain_community.vectorstores import FAISS
-# db=FAISS.from_documents(documents[:30],OllamaEmbeddings(model="mxbai-embed-large"))
+    # step 1: The process begins by loading smm documents using PyPDFLoader.
+    st.session_state.loader=PyPDFLoader('ssm.pdf') 
+    st.session_state.docs=st.session_state.loader.load()
 
+    # step 2: These documents are then split into manageable chunks using the RecursiveCharacterTextSplitter.
+    st.session_state.text_splitter=RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)  
+    st.session_state.final_documents=st.session_state.text_splitter.split_documents(st.session_state.docs[:50])
+
+    #step 3: The document chunks are transformed into high-dimensional vectors using OllamaEmbeddings.
+    st.session_state.embeddings=OllamaEmbeddings(model="mxbai-embed-large") 
+
+    #step 4: The embeddings are stored in FAISS, which serves as the vector store.
+    st.session_state.vectors=FAISS.from_documents(st.session_state.final_documents,st.session_state.embeddings)
+
+
+# step 5
+#Users interact with the application through a Streamlit interface, where they input their queries.
+
+# The retrieval chain is initiated, combining the retrieved documents with the ChatPromptTemplate
+#  to generate a contextually accurate response using Ollama's LLaMA 3.1.
+
+retriever=st.session_state.vectors.as_retriever()
 
 
 # Design ChatPrompt Template
-from langchain_core.prompts import ChatPromptTemplate
 prompt = ChatPromptTemplate.from_template("""
 Answer the following question based only on the provided context. 
 Think step by step before providing a detailed answer. 
@@ -58,29 +76,17 @@ Think step by step before providing a detailed answer.
 Question: {input}""")
 
 
-
+## LLM Model LLama3.1
 llm=Ollama(model="llama3.1")
 
-
+# Combine chat prompt template and Ollama llamma3.1 llm model 
 document_chain=create_stuff_documents_chain(llm,prompt)
 
-
-if "vector" not in st.session_state:
-    st.session_state.embeddings=OllamaEmbeddings(model="mxbai-embed-large")
-    st.session_state.loader=PyPDFLoader('ssm.pdf')
-    st.session_state.docs=st.session_state.loader.load()
-
-    st.session_state.text_splitter=RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)
-    st.session_state.final_documents=st.session_state.text_splitter.split_documents(st.session_state.docs[:50])
-    st.session_state.vectors=FAISS.from_documents(st.session_state.final_documents,st.session_state.embeddings)
-
-
-
-
-retriever=st.session_state.vectors.as_retriever()
-
+# combine retriver vector store relevent info with document chain
 retrieval_chain=create_retrieval_chain(retriever,document_chain)
 
+
+# Streamlit Application
 
 st.title('StockMarket tutorial with B')
 
