@@ -53,8 +53,7 @@ def get_conversational_chain():
     Answer:
     """
 
-    model = ChatGoogleGenerativeAI(model="gemini-pro",
-                             temperature=0.3)
+    model = ChatGoogleGenerativeAI(model="gemini-2.0-flash",temperature=0.3)
 
     prompt = PromptTemplate(template = prompt_template, input_variables = ["context", "question"])
     chain = load_qa_chain(model, chain_type="stuff", prompt=prompt)
@@ -83,8 +82,8 @@ def user_input(user_question):
 
 
 def pdf_summary():
-    st.set_page_config("Chat PDF With B")
-    st.header("Chat with PDF using B💁")
+    st.set_page_config("PDF Chat With Mishti")
+    st.header("PDF Chat with Mishti💁")
 
     user_question = st.text_input("Ask a Question from the PDF Files")
 
@@ -92,7 +91,7 @@ def pdf_summary():
         user_input(user_question)
 
     with st.sidebar:
-        st.header("BM21")
+        st.header("MB21")
         # st.header()
         # st.image('genai1.jpg', caption='Generative Artificial Intelligence',width=None)
         pdf_docs = st.file_uploader("Upload your PDF Files and Click on the Submit & Process Button", accept_multiple_files=True)

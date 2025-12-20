@@ -7,7 +7,7 @@ from langchain_core.tools import tool # tools for our llm
 from langchain.tools.render import render_text_description # to describe tools as a string 
 from langchain_core.output_parsers import JsonOutputParser # ensure JSON input for tools
 from operator import itemgetter # to retrieve specific items in our chain.
-
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 from requests.adapters import HTTPAdapter
 
@@ -15,7 +15,7 @@ import requests
 
 
 
-model = Ollama(model='llama3.1',verbose=True)
+model = llm=ChatGoogleGenerativeAI(model="gemini-2.0-flash",temperature=0.3)
 
 
 @tool
